@@ -1,5 +1,5 @@
 # Removing Spaces from a String - strip()
-print("#Let's see some Functions")
+print("# Let's see some Functions")
 print("1. Removing Spaces from the String")
 print("# strip()")
 s1 = "   Python  "
