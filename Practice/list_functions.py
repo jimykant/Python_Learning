@@ -1,8 +1,7 @@
 """
 Functions of the List
 """
-
-print("# Lets see some Functions of the list")
+print("# Let's see some Functions of the list")
 # append() Function - add only single item to the end of the list (any data-type)
 # Syntax :- list.append(item)
 print("1. append() - add only single items to the end of the list")

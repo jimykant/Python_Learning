@@ -104,11 +104,9 @@ print(f"Tuple is: {t1}")
 print(f"Largest value in the tuple is: {max(t1)}")
 print("\n")
 
-
 # Sum of Tuple - it gives the total sum of all elements in the tuple
 # Syntax - sum(tuple)
 print("13. Sum of Tuple - total sum of all elements in the tuple - sum(tuple)")
 print(f"Tuple is: {t1}")
 print(f"Total of all elements in the tuple is: {sum(t1)}")
 print("\n")
-
