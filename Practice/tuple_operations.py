@@ -1,111 +1,229 @@
 """
-# Tuple :- It is also the comma separated elements in close within parenthesis'()' or without it '()'
-# Example :- (item1, item2, item3)
-# Sequence of the items as a collection
-# It stores elements of any data-type
-# The elements of it is fixed we can not change it means can not do (append, remove, etc...)
+==========================================================
+Tuples in Python
+==========================================================
+Description:
+    - A tuple is an ordered collection of elements.
+    - Tuple elements are enclosed within parentheses ().
+    - A tuple can store elements of different data types.
+    - Tuples are immutable, which means their elements cannot be modified after creation.
 """
-# Length of the tuple - len()
-print("# Let's see some Operations on a Tuple")
-print("1. Length of the tuple - len()")
+
+"""
+----------------------------------------------------------
+1. Creating a Tuple and Finding Length
+----------------------------------------------------------
+Description:
+    - Creates a tuple containing different types of elements.
+    - len() returns the total number of elements in a tuple.
+Syntax:
+    - tuple_name = (element1, element2, ...)
+    - len(tuple_name)
+"""
+print("1. Creating a Tuple and Finding Length")
 t1 = ("Python", 10, 1.5, True, [1, 2, 3], (10, 20))
-print(f"Tuple is: {t1}")
-print(f"Length of the given tuple is: {len(t1)}")
+print(f"Tuple : {t1}")
+print(f"Length : {len(t1)}")
 print("\n")
 
-# Accessing the Tuple elements - using Indexing
-# Syntax - tuple[index]
-print("2. Indexing - tuple[index]")
-print(f"The First element of the tuple is: {t1[0]}")
-print(f"The Last element of the tuple is: {t1[-1]}")
+"""
+----------------------------------------------------------
+2. Tuple Indexing
+----------------------------------------------------------
+Description:
+    - Access individual elements using positive or negative indexing.
+Syntax:
+    - tuple_name[index]
+"""
+print("2. Tuple Indexing")
+print(f"First Element : {t1[0]}")
+print(f"Last Element : {t1[-1]}")
 print("\n")
 
-# Slicing in the tuple
-# Syntax - tuple[start-index:end-index:step]
-print("3. Slicing - tuple[start-index:end-index:step]")
-print(f"Slicing of the tuple: {t1[1:5:2]}")
+"""
+----------------------------------------------------------
+3. Tuple Slicing
+----------------------------------------------------------
+Description:
+    - Extract a portion of a tuple.
+Syntax:
+    - tuple_name[start_index:end_index:step]
+"""
+print("3. Tuple Slicing")
+print(f"Sliced Tuple : {t1[1:5:2]}")
 print("\n")
 
-# Type of tuple
+"""
+----------------------------------------------------------
+4. Creating a Tuple Without Parentheses
+----------------------------------------------------------
+Description:
+    - Parentheses are optional while creating a tuple.
+Syntax:
+    - tuple_name = value1, value2, value3
+"""
+print("4. Creating a Tuple Without Parentheses")
 t2 = 10, 20, 30
-print(f"Another Tuple is: {t2}")
-print(f"Type of it: {type(t2)}")
+print(f"Tuple : {t2}")
+print(f"Data Type : {type(t2)}")
 print("\n")
 
-# Convert list to tuple - tuple(list)
-print("4. Convert list to tuple - tuple(list)")
+"""
+----------------------------------------------------------
+5. Converting List to Tuple
+----------------------------------------------------------
+Description:
+    - tuple() converts a list into a tuple.
+Syntax:
+    - tuple(list_name)
+"""
+print("5. Converting List to Tuple")
 l1 = [1, 2, 3]
-print(f"This is list {l1} is {type(l1)}")
-t1 = tuple(l1)
-print(f"List is converted to Tuple {t1} is {type(t1)}")
+print(f"Original List : {l1}")
+print(f"Data Type : {type(l1)}")
+t3 = tuple(l1)
+print(f"Converted Tuple : {t3}")
+print(f"Data Type : {type(t3)}")
 print("\n")
 
-# Convert tuple to list - list(tuple)
-print("5. Convert tuple to list - list(tuple)")
-fruits = "Mango", "Orange", "Apple"
-print(f"This is tuple {fruits} is {type(fruits)}")
+"""
+----------------------------------------------------------
+6. Converting Tuple to List
+----------------------------------------------------------
+Description:
+    - list() converts a tuple into a list.
+Syntax:
+    - list(tuple_name)
+"""
+print("6. Converting Tuple to List")
+fruits = ("Mango", "Orange", "Apple")
+print(f"Original Tuple : {fruits}")
+print(f"Data Type : {type(fruits)}")
 fruits = list(fruits)
-print(f"Tuple is converted to List {fruits} is {type(fruits)}")
+print(f"Converted List : {fruits}")
+print(f"Data Type : {type(fruits)}")
 print("\n")
 
-# Concatenation of tuple
-print("6. Concatenation of tuple - +")
+"""
+----------------------------------------------------------
+7. Tuple Concatenation
+----------------------------------------------------------
+Description:
+    - Concatenation joins two tuples into one tuple.
+Syntax:
+    - tuple1 + tuple2
+"""
+print("7. Tuple Concatenation")
 std1 = (1001, "John")
-print(f"student_detail_1 is: {std1}")
 std2 = (78.5, 91.0, 83.5, 79.5)
-print(f"student_detail_2 is: {std2}")
+print(f"Student Detail 1 : {std1}")
+print(f"Student Detail 2 : {std2}")
 student_details = std1 + std2
-print(f"Entire details is: {student_details}")
+print(f"Combined Tuple : {student_details}")
 print("\n")
 
-# Repetition of tuple - *
-print("7. Repetition of tuple - *")
-t1 = ("class5", 5000)
-print(f"Initial tuple is: {t1}")
-print(f"Repetition: {t1 * 3}")
+"""
+----------------------------------------------------------
+8. Tuple Repetition
+----------------------------------------------------------
+Description:
+    - Repeats the tuple a specified number of times.
+Syntax:
+    - tuple_name * integer
+"""
+print("8. Tuple Repetition")
+t1 = ("Class5", 5000)
+print(f"Original Tuple : {t1}")
+print(f"Repeated Tuple : {t1 * 3}")
 print("\n")
 
-# Membership operation in tuple - 'in' and 'not in'
-print("8. Membership operation in tuple - 'in' and 'not in'")
-print(f"student_detail_2 is: {std2}")
-print(91.0 in std2)
-print(99.0 in std2)
-print(91.0 not in std2)
-print(99.0 not in std2)
+"""
+----------------------------------------------------------
+9. Membership Operators
+----------------------------------------------------------
+Description:
+    - 'in' checks whether an element exists in the tuple.
+    - 'not in' checks whether an element does not exist in the tuple.
+Syntax:
+    - element in tuple_name
+    - element not in tuple_name
+"""
+print("9. Membership Operators")
+print(f"Tuple : {std2}")
+print(f"91.0 in std2 : {91.0 in std2}")
+print(f"99.0 in std2 : {99.0 in std2}")
+print(f"91.0 not in std2 : {91.0 not in std2}")
+print(f"99.0 not in std2 : {99.0 not in std2}")
 print("\n")
 
-# Count operation on tuple - tuple.count(element)
-print("9. Count operation on tuple - tuple.count(element)")
+"""
+----------------------------------------------------------
+10. Counting Elements
+----------------------------------------------------------
+Description:
+    - count() returns the number of occurrences of an element.
+Syntax:
+    - tuple_name.count(element)
+"""
+print("10. Counting Elements")
 t1 = (10, 4, 1, 9, 0, 1, 1, 1, 0, 1, "Python")
-print(f"Tuple is: {t1}")
-print (f"Occurrence of '1' in above tuple is: {t1.count(1)}")
+print(f"Tuple : {t1}")
+print(f"Occurrences of 1 : {t1.count(1)}")
 print("\n")
 
-# Index Operation - it gives the index of the element of the tuple
-# Syntax - tuple.index(element)
-print("10. Index Operation - it gives the index of the element of the tuple - tuple.index(element)")
-print(f"Tuple is: {t1}")
-print(f"Index of the '1' is {t1.index(1)}")  # what is the index of the '1' in above tuple ?
-print(f"Index of the 'Python' is: {t1.index('Python')}")
+"""
+----------------------------------------------------------
+11. Finding Index of an Element
+----------------------------------------------------------
+Description:
+    - index() returns the index of the first occurrence of an element.
+Syntax:
+    - tuple_name.index(element)
+"""
+print("11. Finding Index of an Element")
+print(f"Tuple : {t1}")
+print(f"Index of 1 : {t1.index(1)}")
+print(f"Index of 'Python' : {t1.index('Python')}")
 print("\n")
 
-# Minimum Value - it gives the smallest value in the tuple
-# Syntax - min(tuple)
-print("11. Minimum Value - smallest value in the tuple - min(tuple)")
+"""
+----------------------------------------------------------
+12. Finding Minimum Value
+----------------------------------------------------------
+Description:
+    - min() returns the smallest element from a tuple.
+Syntax:
+    - min(tuple_name)
+"""
+print("12. Finding Minimum Value")
 t1 = (10, 4, 1, 9, 0, 3, 1)
-print(f"Tuple is: {t1}")
-print(f"Smallest value in the tuple is: {min(t1)}")
+print(f"Tuple : {t1}")
+print(f"Minimum Value : {min(t1)}")
 print("\n")
 
-# Maximum Value - it gives the largest value in the tuple
-# Syntax - max(tuple)
-print("12. Maximum Value - largest value in the tuple - max(tuple)")
-print(f"Tuple is: {t1}")
-print(f"Largest value in the tuple is: {max(t1)}")
+"""
+----------------------------------------------------------
+13. Finding Maximum Value
+----------------------------------------------------------
+Description:
+    - max() returns the largest element from a tuple.
+Syntax:
+    - max(tuple_name)
+"""
+print("13. Finding Maximum Value")
+print(f"Tuple : {t1}")
+print(f"Maximum Value : {max(t1)}")
 print("\n")
 
-# Sum of Tuple - it gives the total sum of all elements in the tuple
-# Syntax - sum(tuple)
-print("13. Sum of Tuple - total sum of all elements in the tuple - sum(tuple)")
-print(f"Tuple is: {t1}")
-print(f"Total of all elements in the tuple is: {sum(t1)}")
+"""
+----------------------------------------------------------
+14. Sum of Tuple Elements
+----------------------------------------------------------
+Description:
+    - sum() returns the total of all numeric elements in a tuple.
+Syntax:
+    - sum(tuple_name)
+"""
+print("14. Sum of Tuple Elements")
+print(f"Tuple : {t1}")
+print(f"Total Sum : {sum(t1)}")
