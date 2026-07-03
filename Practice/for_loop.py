@@ -185,3 +185,22 @@ for score in scores:
     if highest < score:
         highest = score
 print(f"Highest Score : {highest}")
+print("\n")
+
+"""
+----------------------------------------------------------
+9. Nested for Loop
+----------------------------------------------------------
+Description:
+    - A nested for loop is a loop inside another loop.
+    - For every iteration of the outer loop, the inner loop executes completely.
+    - Nested loops are commonly used for patterns, matrices, and table-like data.
+Syntax:
+    - for variable1 in sequence1:
+          for variable2 in sequence2:
+              statement
+"""
+print("9. Nested for Loop")
+for i in range(3):
+    for j in range(2):
+        print(f"i = {i}, j = {j}")
