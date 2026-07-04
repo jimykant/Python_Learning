@@ -1,6 +1,6 @@
 """
 Assignment 1'
-Task 1 :- Personalized greeting using User-Inputs (Hello, John Doe! Welcome to the Python program.)
+Task 2 :- Personalized greeting using User-Inputs (Hello, John Doe! Welcome to the Python program.)
 """
 
 first_name = input("Enter your first name: ")
