@@ -1,0 +1,6 @@
+This file is over-written using 'w' mode in Python.
+Have a nice day!!!
+This content has been writen using 'a' mode.
+'a' mode is used to add new content at the end of the file.
+also 'a' mode creates new file if it does not exist.
+Good bye!!!
