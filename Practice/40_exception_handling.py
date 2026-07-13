@@ -82,7 +82,7 @@ Note:
 """
 print("3. Use else Block with try-except")
 try:
-    with open("40_content.txt", "tr") as file_handler:
+    with open("39_content.txt", "tr") as file_handler:
         data = file_handler.read()
 except FileNotFoundError as file_error:
     print("The file you are trying to open does not exist")

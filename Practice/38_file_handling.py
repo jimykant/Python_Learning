@@ -15,7 +15,7 @@ File Modes:
 import os
 from pathlib import Path
 
-FILE_NAME = "40_content.txt"
+FILE_NAME = "39_content.txt"
 
 """
 ----------------------------------------------------------
@@ -257,7 +257,7 @@ Syntax:
     - Path(path).exists()
 """
 print("13. Check File Using pathlib.Path.exists()")
-file_path = Path("/home/jarvis/Python_Learning/Practice/40_content.txt")
+file_path = Path("/home/jarvis/Python_Learning/Practice/39_content.txt")
 if file_path.exists():
     print(f"File Exists using pathlib : {file_path}")
 else:

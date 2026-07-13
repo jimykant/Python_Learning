@@ -67,7 +67,7 @@ Syntax:
     - json.dump(data, file_handler, indent=4)
 """
 print("2. Write Data to JSON File Using dump()")
-with open("43_student_data.json", "tx") as file_handler:
+with open("42_student_data.json", "tx") as file_handler:
     json.dump(students, file_handler, indent=4)
 print("Data Written Successfully")
 print("\n")
@@ -83,7 +83,7 @@ Syntax:
     - data = json.load(file_handler)
 """
 print("3. Read JSON File Using load()")
-with open("43_student_data.json", "tr") as file_handler:
+with open("42_student_data.json", "tr") as file_handler:
     data = json.load(file_handler)
 print(data)
 print(f"Data Type : {type(data)}")
@@ -105,15 +105,15 @@ Note:
 """
 print("4. Update Existing JSON File")
 try:
-    with open("43_student_data.json", "tr") as file_handler:
+    with open("42_student_data.json", "tr") as file_handler:
         data = json.load(file_handler)
 except FileNotFoundError:
     print("JSON File Not Found")
     print("Creating New JSON File")
-    with open("43_student_data.json", "tw") as file_handler:
+    with open("42_student_data.json", "tw") as file_handler:
         json.dump(students, file_handler, indent=4)
 else:
     data.update(students)
-    with open("43_student_data.json", "tw") as file_handler:
+    with open("42_student_data.json", "tw") as file_handler:
         json.dump(data, file_handler, indent=4)
     print("JSON File Updated Successfully")
