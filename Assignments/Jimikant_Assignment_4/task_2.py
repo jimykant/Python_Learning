@@ -22,7 +22,7 @@ with open("output.txt", "ta") as file:
 print("Data successfully appended.")
 
 # Read the final content
-print("\nFinal content of output.txt:")
+print("\nFinal content of 'output.txt':")
 with open("output.txt", "tr") as file:
     content = file.read()
 print(content)
