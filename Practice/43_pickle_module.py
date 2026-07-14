@@ -122,7 +122,7 @@ Note:
 """
 print("4. Find Students Scoring 90% or More")
 student_list_90 = []
-with open("44_students_data.bin", "br") as file_handler:
+with open("44_students_data.bin", "rb") as file_handler:
     while True:
         try:
             data = pickle.load(file_handler)

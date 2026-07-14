@@ -55,7 +55,7 @@ Syntax:
 """
 print("2. Handle FileNotFoundError")
 try:
-    with open("my_file.txt", "tr") as file_handler:
+    with open("my_file.txt", "r") as file_handler:
         data = file_handler.read()
     print(data)
 except FileNotFoundError as file_error:
@@ -82,7 +82,7 @@ Note:
 """
 print("3. Use else Block with try-except")
 try:
-    with open("39_content.txt", "tr") as file_handler:
+    with open("39_content.txt", "r") as file_handler:
         data = file_handler.read()
 except FileNotFoundError as file_error:
     print("The file you are trying to open does not exist")
@@ -115,7 +115,7 @@ Note:
 print("4. Use finally Block with try-except")
 file_handler = None
 try:
-    file_handler = open("my_file.txt", "tr")
+    file_handler = open("my_file.txt", "r")
     data = file_handler.read()
     print(data)
 except FileNotFoundError as file_error:

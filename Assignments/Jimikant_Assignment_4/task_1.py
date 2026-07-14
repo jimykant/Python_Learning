@@ -12,7 +12,7 @@ file_name = "sample.txt"
 
 # Create file and write data
 try:
-    with open(file_name, "tx") as file:
+    with open(file_name, "x") as file:
         file.write(
 """This is a sample text file.
 It contains multiple lines."""
@@ -22,7 +22,7 @@ except FileExistsError:
 
 # Read file and display content
 try:
-    with open(file_name, "tr") as file:
+    with open(file_name, "r") as file:
         print("Reading file content:")
         line_number = 1
         for line in file:

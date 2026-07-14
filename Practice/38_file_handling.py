@@ -24,7 +24,7 @@ FILE_NAME = "39_content.txt"
 Description:
     - Creates a new file.
 Syntax:
-    - open(file_name, "tx")
+    - open(file_name, "x")
 Note:
     - Raises FileExistsError if file already exists.
 """
@@ -33,7 +33,7 @@ if os.path.exists(FILE_NAME):
     print(f"File Exists : {FILE_NAME}")
 else:
     print("File does not exist. Creating it...")
-    file_handler = open(FILE_NAME, "tx")
+    file_handler = open(FILE_NAME, "x")
     file_handler.write("""This is a test file.
 We are learning File Handling in Python.
 Modes to open a file are:
@@ -54,7 +54,7 @@ Syntax:
     - file.read()
 """
 print("2. Read Entire File Using read()")
-file_handler = open(FILE_NAME, "tr")
+file_handler = open(FILE_NAME, "r")
 print(f"File Handler : {file_handler}")
 content = file_handler.read()
 file_handler.close()
@@ -73,7 +73,7 @@ Syntax:
     - file.read(size)
 """
 print("3. Read First N Characters Using read(size)")
-file_handler = open(FILE_NAME, "tr")
+file_handler = open(FILE_NAME, "r")
 content = file_handler.read(10)
 file_handler.close()
 print(f"First 10 Characters : {content}")
@@ -89,7 +89,7 @@ Syntax:
     - file.readline()
 """
 print("4. Read First Line Using readline()")
-file_handler = open(FILE_NAME, "tr")
+file_handler = open(FILE_NAME, "r")
 content = file_handler.readline()
 file_handler.close()
 print(f"First Line : {content}")
@@ -105,7 +105,7 @@ Syntax:
     - file.readlines()
 """
 print("5. Read All Lines Using readlines()")
-file_handler = open(FILE_NAME, "tr")
+file_handler = open(FILE_NAME, "r")
 content = file_handler.readlines()
 file_handler.close()
 print("All Lines:")
@@ -125,7 +125,7 @@ Syntax:
     - file.close()
 """
 print("6. Close a File Using close()")
-file_handler = open(FILE_NAME, "tr")
+file_handler = open(FILE_NAME, "r")
 print(f"Before Closing : {file_handler}")
 file_handler.close()
 print(f"After Closing  : {file_handler}")
@@ -143,7 +143,7 @@ Note:
     - Creates file if it does not exist.
 """
 print("7. Overwrite File Using 'w' Mode")
-file_handler = open(FILE_NAME, "tw")
+file_handler = open(FILE_NAME, "w")
 file_handler.write(
 """This file is overwritten using 'w' mode in Python.
 Have a nice day!!!
@@ -162,7 +162,7 @@ Syntax:
     - file.tell()
 """
 print("8. Get Current File Pointer Position Using tell()")
-file_handler = open(FILE_NAME, "tr")
+file_handler = open(FILE_NAME, "r")
 print(f"Initial Position : {file_handler.tell()}")
 content = file_handler.read(10)
 print(f"Content Read     : {content}")
@@ -182,7 +182,7 @@ Note:
     - seek(0) moves pointer to beginning.
 """
 print("9. Move File Pointer Using seek()")
-file_handler = open(FILE_NAME, "tr")
+file_handler = open(FILE_NAME, "r")
 content = file_handler.read(10)
 print(f"First Read             : {content}")
 print(f"Position After Read    : {file_handler.tell()}")
@@ -205,7 +205,7 @@ Note:
     - Creates file if it does not exist.
 """
 print("10. Append Content Using 'a' Mode")
-file_handler = open(FILE_NAME, "ta")
+file_handler = open(FILE_NAME, "a")
 file_handler.write(
 """This content has been written using 'a' mode.
 'a' mode is used to add content at the end of the file.
@@ -226,7 +226,7 @@ Syntax:
     - with open(file_name, mode) as file:
 """
 print("11. Read File Using with Statement")
-with open(FILE_NAME, "tr") as file_handler:
+with open(FILE_NAME, "r") as file_handler:
     content = file_handler.read(20)
 print(f"Content : {content}")
 print("\n")
